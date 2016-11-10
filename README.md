@@ -5,6 +5,7 @@
 
 - step2:
 android studio 建立新项目，成功后，新建Library（Module选择library）,Application的build.gradle文件加入：
+<code>
 dependencies {
 classpath 'com.android.tools.build:gradle:2.2.2'
 classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5' //加入这行代码
@@ -15,20 +16,24 @@ jcenter()
 maven { url "https://jitpack.io" }//加入这行代码
 }
 }
+</code>
 Library的build.gradle文件加入：
+<code>
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'//加入这行代码
 group='com.github.arilpan'//加入这行代码,arilpan是本人的github账号
-
+</code>
 - step3:
 将整体项目上传到github，注意不是lib项目，而是Application包含app、lib的整个项目。
 使用如下命令：
+<code>
 git init
 git add .
 git commit -m "init commit"
 git remote add origin https://github.com/arilpan/testJitPack.git
 git push -u origin master
 实例：https://github.com/arilpan/jitLibTest
+</code>
 发布该项目，项目链接后面加入/releases访问发布路径，如项目https://github.com/arilpan/jitLibTest对应的release路径为：https://github.com/arilpan/jitLibTest/releases。
 点击“draft a new release”，输入Tag Version（版本号），如V1.0，title和write（标题和描述）任意，点击publish Release发布新版本。
 
