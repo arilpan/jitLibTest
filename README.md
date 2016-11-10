@@ -5,7 +5,7 @@
 
 - step2:
 android studio 建立新项目，成功后，新建Library（Module选择library）,Application的build.gradle文件加入：
-<code>
+<pre>
 dependencies {<br>
 classpath 'com.android.tools.build:gradle:2.2.2'<br>
 classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5' //加入这行代码<br>
@@ -16,13 +16,13 @@ jcenter()<br>
 maven { url "https://jitpack.io" }//加入这行代码<br>
 }<br>
 }<br>
-</code>
+</pre>
 Library的build.gradle文件加入：
-<code>
+<pre>
 apply plugin: 'com.android.library'<br>
 apply plugin: 'com.github.dcendents.android-maven'//加入这行代码<br>
 group='com.github.arilpan'//加入这行代码,arilpan是本人的github账号<br>
-</code>
+</pre>
 - step3:
 将整体项目上传到github，注意不是lib项目，而是Application包含app、lib的整个项目。
 使用如下命令：
